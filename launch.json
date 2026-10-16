@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "HamsterToken",
+    "name": "HAMSTER",
+    "symbol": "HAMSTER",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 1000,
+    "initialMarketCapWei": "1000000000000000000000",
+    "remainderTo": "0xee2aaa315cf7ed169f93148d30d24af9318dbb66"
+  },
+  "notes": "HamsterToken (src/HamsterToken.sol) is HAMSTER (symbol HAMSTER), a fixed-supply OpenZeppelin v5 ERC-20 with 18 decimals. Its constructor takes no arguments and mints 1,000,000,000 HAMSTER (1000000000000000000000000000 minor units) once to msg.sender, the launch factory. It has no owner, no privileged role, no post-deployment mint or burn, no transfer tax, no pause, no blocklist, no upgrade path and no external calls; every transfer moves exactly the requested amount, so the swarm's distributor transfer, the pool seed and trader swaps are untaxed. No application contracts are deployed: the brief's 'vault' is the requester's 80% treasury allocation, which the factory forwards to economics.remainderTo (0xee2aaa315cf7ed169f93148d30d24af9318dbb66, also the requester's fees-and-payouts address). 10% of the supply (economics.poolBps) seeds the single-sided IMD pool at a 1,000 IMD opening market cap derived by the deployer; the swarm's 10% is taken by the factory to the launch's MerkleDistributor and is not written here. Project references supplied by the requester: Twitter @hamsterhourgame, web https://hamster-hour-bet-on-the-wheel.sites.imd.fun/."
+}
